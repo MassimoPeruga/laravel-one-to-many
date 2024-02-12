@@ -9,7 +9,7 @@ I task da svolgere sono diversi, ma alcuni di essi sono un ripasso di ciò che a
 
 1. [x]creare la migration per la tabella types
 2. [x]Creare il model Type
-3. [o]creare la migration di modifica per la tabella projects per aggiungere la chiave esterna
+3. [x]creare la migration di modifica per la tabella projects per aggiungere la chiave esterna
 4. [o]aggiungere ai model Type e Project i metodi per definire la relazione one to many
 5. [o]visualizzare nella pagina di dettaglio di un progetto la tipologia associata, se presente
 6. [o]permettere all’utente di associare una tipologia nella pagina di creazione e modifica di un progetto
