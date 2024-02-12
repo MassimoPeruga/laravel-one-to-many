@@ -1,15 +1,20 @@
-# Laravel Boolfolio - Base
+# Laravel Boolfolio - Project Typology
 
 
 ### Consegna
-Creiamo con Laravel il nostro sistema di gestione del nostro Portfolio di progetti.
-Oggi iniziamo un nuovo progetto che si arricchirà nel corso delle prossime lezioni: man mano aggiungeremo funzionalità e vedremo la nostra applicazione crescere ed evolvere.
-Nel pomeriggio, rifate ciò che abbiamo visto insieme stamattina stilando tutto a vostro piacere utilizzando SASS.
+Continuiamo a lavorare sul codice dei giorni scorsi, ma in una nuova repo e aggiungiamo una nuova entità Type.
+Questa entità rappresenta la tipologia di progetto ed è in relazione one to many con i progetti.
 ##### Descrizione:
-Ripercorriamo gli steps fatti a lezione ed iniziamo un nuovo progetto Laravel con autenticazione.
-Iniziamo con il definire il layout, modello, migrazione, controller e rotte necessarie per il sistema portfolio:
-1. Autenticazione: si parte con l'autenticazione e la creazione di un layout per back-office
-2. Creazione del modello Project con relativa migrazione, seeder, controller e rotte
-3. Per la parte di back-office creiamo un resource controller Admin\ProjectController per gestire tutte le operazioni CRUD dei progetti
+I task da svolgere sono diversi, ma alcuni di essi sono un ripasso di ciò che abbiamo fatto nelle lezioni dei giorni scorsi:
+
+1. [o]creare la migration per la tabella types
+2. [o]Creare il model Type
+3. [o]creare la migration di modifica per la tabella projects per aggiungere la chiave esterna
+4. [o]aggiungere ai model Type e Project i metodi per definire la relazione one to many
+5. [o]visualizzare nella pagina di dettaglio di un progetto la tipologia associata, se presente
+6. [o]permettere all’utente di associare una tipologia nella pagina di creazione e modifica di un progetto
+7. [o]gestire il salvataggio dell’associazione progetto-tipologia con opportune regole di validazione
+
 ##### Bonus
-Implementiamo la validazione dei dati dei Progetti nelle operazioni CRUD che lo richiedono usando due form requests.
+1. [o]creare il seeder per il model Type.
+2. [o]aggiungere le operazioni CRUD per il model Type, in modo da gestire le tipologie di progetto direttamente dal pannello di amministrazione.
