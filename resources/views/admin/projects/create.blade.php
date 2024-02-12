@@ -21,6 +21,13 @@
                     required value="{{ old('name') }}">
                 @include('shared.error', ['field' => 'name'])
             </div>
+            <div class="col-4">
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Immagine del progetto</label>
+                    <input class="form-control" type="file" id="formFile" name="img">
+                </div>
+            </div>
+
             <div class="col-6">
                 <label for="Serie" class="form-label">Repository</label>
                 <input type="text" class="form-control @error('repository') is-invalid @enderror" id="Serie"
@@ -29,8 +36,8 @@
             </div>
 
             <div class="col-2">
-                <label for="Tipo" class="form-label">Tipo</label>
-                <select id="Tipo" class="form-select @error('is_public') is-invalid @enderror" name="is_public">
+                <label for="Visibilità" class="form-label">Visibilità</label>
+                <select id="Visibilità" class="form-select @error('is_public') is-invalid @enderror" name="is_public">
                     @if (old('is_public') === 0)
                         <option value="1">Pubblica</option>
                         <option value="0" selected>Privata</option>
@@ -42,19 +49,26 @@
                 @include('shared.error', ['field' => 'is_public'])
             </div>
 
-            <div class="col-4">
-                <div class="mb-3">
-                    <label for="formFile" class="form-label">Immagine del progetto</label>
-                    <input class="form-control" type="file" id="formFile" name="img">
-                </div>
-            </div>
-
             <div class="col-12">
                 <label for="immagine" class="form-label">Link alla Repository</label>
                 <input type="url" class="form-control @error('repo_url') is-invalid @enderror" id="immagine"
                     name="repo_url" value="{{ old('repo_url') }}">
                 @include('shared.error', ['field' => 'repo_url'])
             </div>
+
+            <div class="col-3">
+                <label for="Tipo" class="form-label">Tipo</label>
+                <select id="Tipo" class="form-select" name="type_id">
+                    <option selected>Seleziona un tipo</option>
+                    @foreach ($types as $type)
+                        <option value="{{ $type->id }}" @if (old('type_id') === $type->id) selected @endif>
+                            {{ $type->title }}
+                        </option>
+                    @endforeach
+                </select>
+                @include('shared.error', ['field' => 'type_id'])
+            </div>
+
             <div class="col-12">
                 <label for="Descrizione" class="form-label">Assegnazione</label>
                 <textarea class="form-control @error('assignment') is-invalid @enderror" id="Descrizione" rows="5"

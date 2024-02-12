@@ -15,7 +15,7 @@ class TypeSeeder extends Seeder
     public function run(): void
     {
         Type::truncate();
-        $types = ['Frontend', 'Backend', 'Data Analytics', 'AI'];
+        $types = ['Frontend', 'Backend', 'Full Stack', 'Data Analytics', 'AI'];
 
         foreach ($types as $type) {
             $new_type = new Type();

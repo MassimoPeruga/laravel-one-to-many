@@ -28,6 +28,15 @@
                     </div>
                     <div class="card-body pt-0">
                         <hr>
+                        <div class="row">
+                            <div class="col-3">
+                                @if ($project->type)
+                                    Tipo: {{ $project->type->title }}
+                                @endif
+                            </div>
+                            <div class="col-9"></div>
+                        </div>
+                        <hr>
                         <p class="card-text pt-3 fs-5 border-0 text-start">
                             {{ $project['assignment'] }}
                         </p>

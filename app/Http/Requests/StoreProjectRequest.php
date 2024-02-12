@@ -22,6 +22,7 @@ class StoreProjectRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'type_id' => 'nullable|exists:types,id',
             'name' => 'required|unique:projects|max:45',
             'repository' => 'nullable|max:45',
             'repo_url' => 'nullable|url',
@@ -34,12 +35,13 @@ class StoreProjectRequest extends FormRequest
     public function messages(): array
     {
         return [
+            'type_id' => 'Il campo Tipo non è valido.',
             'name.required' => 'Il campo Nome è obbligatorio.',
             'name.unique' => 'Il campo Nome deve essere unico.',
             'name.max' => 'Il campo Nome non può superare i :max caratteri.',
             'repository.max' => 'Il campo Repository non può superare i :max caratteri.',
             'repo_url.url' => 'Il campo Link alla Repository deve essere un URL valido.',
-            'is_public' => 'Il valore del campo Tipo è errato.',
+            'is_public' => 'Il valore del campo Visibilità è errato.',
             'img.image' => 'Il campo Immagine non è valido.',
             'img.max' => "L'immagine caricata non può superare i :max KB.",
         ];

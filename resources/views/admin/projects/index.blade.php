@@ -29,7 +29,7 @@
                         </th>
                         <th scope="col" class="col-1">
                             <span class="p-2">
-                                Tipo
+                                Visibilità
                             </span>
                         </th>
                         <th scope="col" class="col-4"></th>
