@@ -7,8 +7,8 @@ Questa entità rappresenta la tipologia di progetto ed è in relazione one to ma
 ##### Descrizione:
 I task da svolgere sono diversi, ma alcuni di essi sono un ripasso di ciò che abbiamo fatto nelle lezioni dei giorni scorsi:
 
-1. [o]creare la migration per la tabella types
-2. [o]Creare il model Type
+1. [x]creare la migration per la tabella types
+2. [x]Creare il model Type
 3. [o]creare la migration di modifica per la tabella projects per aggiungere la chiave esterna
 4. [o]aggiungere ai model Type e Project i metodi per definire la relazione one to many
 5. [o]visualizzare nella pagina di dettaglio di un progetto la tipologia associata, se presente
