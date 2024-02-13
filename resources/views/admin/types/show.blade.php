@@ -5,12 +5,22 @@
         @include('shared.toast')
         <div class="row">
             <div class="col-12">
-                <h2>I tuoi progetti</h2>
+                <h2>Progetti {{ $type['title'] }} </h2>
             </div>
-            <div class="col text-end">
-                <a href="{{ route('admin.projects.create') }}" type="button" class="btn btn-primary mb-3">
-                    Aggiungi un nuovo progetto
+            <div class="col text-end mb-3">
+                <a href="{{ route('admin.types.index') }}" type="button" class="btn btn-info align-self-center">
+                    Torna alla tabella delle tipologie
                 </a>
+                <a href="{{ route('admin.types.edit', $type) }}" type="button" class="btn btn-warning mx-2">
+                    Modifica questa tipologia
+                </a>
+                @include('shared.modal', [
+                    'modalRoute' => 'admin.types.destroy',
+                    'itemToDelete' => "$type[slug]",
+                    'itemName' => "$type[title]",
+                    'modalButton' => 'questa tipologia',
+                    'modalWarning' => true,
+                ])
             </div>
         </div>
         <div class="bg-info-subtle rounded py-3">
@@ -60,7 +70,7 @@
                                 </span>
                             </td>
                             <td>
-                                <div class="text-center p-2">
+                                <div class="text-end p-2">
                                     <a href="{{ route('admin.projects.show', $project) }}" type="button"
                                         class="btn btn-info btn-sm">
                                         Maggiori Dettagli

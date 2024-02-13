@@ -85,7 +85,11 @@
             </div>
         </form>
         <div class="mt-3 d-flex justify-content-between">
-            @include('shared.modal')
+            @include('shared.modal', [
+                'modalRoute' => 'admin.projects.destroy',
+                'itemToDelete' => "$project[slug]",
+                'itemName' => "$project[name]",
+            ])
         </div>
     </div>
 @endsection

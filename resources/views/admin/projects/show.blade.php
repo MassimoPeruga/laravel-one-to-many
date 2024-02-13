@@ -62,7 +62,11 @@
             </div>
             <div>
                 <div class="col-12">
-                    @include('shared.modal')
+                    @include('shared.modal', [
+                        'modalRoute' => 'admin.projects.destroy',
+                        'itemToDelete' => "$project[slug]",
+                        'itemName' => "$project[name]",
+                    ])
                 </div>
             </div>
         </div>

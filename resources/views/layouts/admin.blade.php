@@ -64,6 +64,12 @@
                                     <i class="fa-regular fa-folder-open fa-lg fa-fw"></i> Progetti
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white {{ Route::currentRouteName() == 'dashboard' ? 'bg-secondary' : '' }}"
+                                    href="{{ route('admin.types.index') }}">
+                                    <i class="fa-solid fa-cubes"></i> Tipi
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
